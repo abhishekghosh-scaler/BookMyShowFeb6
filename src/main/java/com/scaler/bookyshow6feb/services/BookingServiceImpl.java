@@ -58,7 +58,7 @@ public class BookingServiceImpl implements BookingService
 
 //        * ------ Take the lock ---------
 //        * 3. Get the list of ShowSeats using showSeatIds
-        List<ShowSeat> showSeats = showSeatRepository.findAllByShowSeatId(showSeatIds);
+        List<ShowSeat> showSeats = showSeatRepository.findAllById(showSeatIds);
         if(showSeats.isEmpty())
         {
             throw new RuntimeException("Seats for the show not found");

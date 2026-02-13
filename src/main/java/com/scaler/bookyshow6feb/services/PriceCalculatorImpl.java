@@ -6,6 +6,7 @@ import com.scaler.bookyshow6feb.models.ShowSeatType;
 import com.scaler.bookyshow6feb.repositories.ShowSeatTypeRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -21,7 +22,6 @@ public class PriceCalculatorImpl implements PriceCalculator{
     {
         double totalPrice = 0;
         List<ShowSeatType> showSeatTypes = showSeatTypeRepository.findByShow(show);
-
         for (ShowSeat showSeat : showSeats)
         {
             for (ShowSeatType showSeatType : showSeatTypes)

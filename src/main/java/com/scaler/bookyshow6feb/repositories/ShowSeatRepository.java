@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface ShowSeatRepository extends JpaRepository<ShowSeat, Long>
 {
-    List<ShowSeat> findAllByShowSeatId(List<Long> showSeatIds);
+    List<ShowSeat> findAllById(Long id);
 
     /*
     * If Id is present => update
